@@ -14,6 +14,8 @@
 		83388C612A6A8300004A7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83388C602A6A8300004A7212 /* Assets.xcassets */; };
 		83388C642A6A8300004A7212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83388C622A6A8300004A7212 /* LaunchScreen.storyboard */; };
 		83388C672A6A8300004A7212 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83388C662A6A8300004A7212 /* main.m */; };
+		83388C6E2A6A8610004A7212 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 83388C6D2A6A8610004A7212 /* demo.html */; };
+		83388C702A6A8D1B004A7212 /* inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 83388C6F2A6A87D5004A7212 /* inject.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		83388C632A6A8300004A7212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83388C652A6A8300004A7212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83388C662A6A8300004A7212 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83388C6D2A6A8610004A7212 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
+		83388C6F2A6A87D5004A7212 /* inject.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = inject.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		83388C532A6A82FF004A7212 /* TestWKWebView */ = {
 			isa = PBXGroup;
 			children = (
+				83388C6D2A6A8610004A7212 /* demo.html */,
 				83388C542A6A82FF004A7212 /* AppDelegate.h */,
 				83388C552A6A82FF004A7212 /* AppDelegate.m */,
 				83388C572A6A82FF004A7212 /* SceneDelegate.h */,
@@ -72,6 +77,7 @@
 				83388C622A6A8300004A7212 /* LaunchScreen.storyboard */,
 				83388C652A6A8300004A7212 /* Info.plist */,
 				83388C662A6A8300004A7212 /* main.m */,
+				83388C6F2A6A87D5004A7212 /* inject.js */,
 			);
 			path = TestWKWebView;
 			sourceTree = "<group>";
@@ -134,7 +140,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83388C642A6A8300004A7212 /* LaunchScreen.storyboard in Resources */,
+				83388C6E2A6A8610004A7212 /* demo.html in Resources */,
 				83388C612A6A8300004A7212 /* Assets.xcassets in Resources */,
+				83388C702A6A8D1B004A7212 /* inject.js in Resources */,
 				83388C5F2A6A82FF004A7212 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +307,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +334,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function logEvent(event) {
+            console.log(`lifecycle: '${event.type}'`);
+        }
+        
+        function handleReadyStateChange(event) {
+            console.log(`lifecycle: '${event.type}' => '${document.readyState}'`);
+        }
+
+        function handlePageHide(event) {
+            console.log(`Event 'pagehide' fired`);
+            // 在这里可以添加一些需要执行的代码，例如保存用户数据或执行清理操作
+        }
+
+        document.addEventListener('DOMContentLoaded', logEvent);
+        document.addEventListener('readystatechange', handleReadyStateChange);
+        window.addEventListener('load', logEvent);
+        window.addEventListener('beforeunload', logEvent);
+        window.addEventListener('pagehide', handlePageHide);
+        window.addEventListener('unload', logEvent);
+    </script>
+</head>
+<body>
+    <h1>Event Test</h1>
+    <p>Click the link below to test the 'pagehide' event:</p>
+    <a href="https://www.example.com">Go to Example.com</a>
+    
+</body>
+
+</html>
