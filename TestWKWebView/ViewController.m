@@ -83,8 +83,9 @@ void printLog2(SEL selector, NSString *ext) {
         [self.webView loadFileURL:htmlFileURL allowingReadAccessToURL:htmlFileBaseURL];
     }
 #else
-    NSURL *url = [NSURL URLWithString:@"https://www.example.com"];
+    NSURL *url = [NSURL URLWithString:@"https://wkwebview-lifecycle-test.vercel.app/"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    printLog(NSSelectorFromString(@"loadRequest:"));
     [self.webView loadRequest:request];
 #endif
 }
