@@ -28,6 +28,13 @@ typedef NS_OPTIONS(NSUInteger, _WKRenderingProgressEvents) {
     _WKRenderingProgressEventFirstMeaningfulPaint = 1 << 8,
 };
 
+typedef NS_ENUM(NSInteger, _WKSameDocumentNavigationType) {
+    _WKSameDocumentNavigationTypeAnchorNavigation,
+    _WKSameDocumentNavigationTypeSessionStatePush,
+    _WKSameDocumentNavigationTypeSessionStateReplace,
+    _WKSameDocumentNavigationTypeSessionStatePop,
+};
+
 void printLog(SEL selector) {
     NSLog(@"[Native] lifecycle: '%@'", NSStringFromSelector(selector));
 }
@@ -131,13 +138,37 @@ void printLog2(SEL selector, NSString *ext) {
     printLog(_cmd);
 }
 
+- (void)_webView:(WKWebView *)webView navigationDidFinishDocumentLoad:(WKNavigation *)navigation {
+    printLog(_cmd);
+}
+
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    printLog(_cmd);
+}
+
+- (void)_webView:(WKWebView *)webView navigation:(WKNavigation *)navigation didSameDocumentNavigation:(_WKSameDocumentNavigationType)navigationType {
     printLog(_cmd);
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     printLog(_cmd);
     decisionHandler(WKNavigationActionPolicyAllow);
+}
+
+- (void)_webViewWebProcessDidBecomeResponsive:(WKWebView *)webView {
+    printLog(_cmd);
+}
+
+- (void)_webViewWebProcessDidBecomeUnresponsive:(WKWebView *)webView {
+    printLog(_cmd);
+}
+
+- (void)_webView:(WKWebView *)webView willSnapshotBackForwardListItem:(WKBackForwardListItem *)item {
+    printLog(_cmd);
+}
+
+- (void)_webView:(WKWebView *)webView willGoToBackForwardListItem:(WKBackForwardListItem *)item inPageCache:(BOOL)inPageCache {
+    printLog(_cmd);
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
